@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今天吃什么🍚</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="name">今天吃什么?🍚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    <div id="choice">
+      <h2>是否有心仪的饭堂？</h2>
+      <button id="yesButton" onclick="chooseStore(true)">是</button>
+      <button id="noButton" onclick="chooseStore(false)">否</button>
+    </div>
+    <div id="storeChoice" style="display: none">
+      <h2>请选择想吃的饭堂：</h2>
+      <select id="store">
+        <option value="榕园">榕园二楼</option>
+        <option value="荔园">荔园</option>
+        <option value="槿园">槿园三楼</option>
+        <option value="若海">若海</option>
+      </select>
+      <button onclick="selectDrink1()">选择</button>
+    </div>
+    <div id="result" style="display: none">
+      <h2>今天的饭是：</h2>
+      <h1 id="drink"></h1>
+      <button onclick="retryDrink()">重选食物</button>
+    </div>
+    <div id="retryChoice" style="display: none">
+      <h2>抽中了饭堂：</h2>
+      <h1 id="selectedStore"></h1>
+      <h2>要重选饭堂吗？</h2>
+      <button id="yesButton" onclick="chooseStore(false)">是</button>
+      <button id="noButton" onclick="selectDrink2()">否</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
