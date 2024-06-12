@@ -77,7 +77,7 @@ function selectFood2() {
 function retryStore() {
   retryCount++;
   if (retryCount >= 10) {
-    alert("你都抽10次，看得出饭堂很无聊，出去吃吧好吗？好的。");
+    alert("你都抽10次了，看得出饭堂很无聊，出去吃吧好吗？好的。");
     retryCount = 0;
     return;
   }
@@ -98,7 +98,7 @@ function retryStore() {
 function retryFood() {
   retryCount++;
   if (retryCount >= 10) {
-    alert("你都抽10次，看得出饭堂很无聊，出去吃吧好吗？好的。");
+    alert("你都抽10次了，看得出饭堂很不对你胃口，出去吃吧好吗？好的。");
     retryCount = 0;
     return;
   }
