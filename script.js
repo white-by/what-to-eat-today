@@ -29,6 +29,7 @@ const foods = {
 
 let selectedStore = ""; // 声明全局变量用于存储当前选择的店铺
 let selectedFloor = ""; // 声明全局变量用于存储当前选择的楼层
+let retryCount = 0; // 用于计数重试次数
 
 // 用户选择是否有心仪的店铺
 function chooseStore(hasStore) {
@@ -74,6 +75,13 @@ function selectFood2() {
 
 // 重选店铺
 function retryStore() {
+  retryCount++;
+  if (retryCount >= 10) {
+    alert("你都抽10次，看得出饭堂很无聊，出去吃吧好吗？好的。");
+    retryCount = 0;
+    return;
+  }
+
   document.getElementById("result").style.display = "none";
   document.getElementById("retryChoice").style.display = "none";
   const storeKeys = Object.keys(stores);
@@ -88,6 +96,13 @@ function retryStore() {
 
 // 用户选择是否要重选食物
 function retryFood() {
+  retryCount++;
+  if (retryCount >= 10) {
+    alert("你都抽10次，看得出饭堂很无聊，出去吃吧好吗？好的。");
+    retryCount = 0;
+    return;
+  }
+
   const selectedFood =
     foods[selectedFloor][
       Math.floor(Math.random() * foods[selectedFloor].length)
